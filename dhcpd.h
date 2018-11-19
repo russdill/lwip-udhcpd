@@ -5,6 +5,12 @@
 #ifndef UDHCP_DHCPD_H
 #define UDHCP_DHCPD_H 1
 
+#include <lwip/opt.h>
+
+#ifndef UDHCP_DEBUG
+#define UDHCP_DEBUG LWIP_DBG_OFF
+#endif
+
 /* Defaults you may want to tweak */
 /* Default max_lease_sec */
 #define DEFAULT_LEASE_TIME      (60*60*24 * 10)
